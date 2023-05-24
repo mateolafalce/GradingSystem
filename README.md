@@ -99,7 +99,10 @@ The SchoolRegister structure defines the requirements for the accounts that must
 
 </details>
 
-<h3 align="center">Register an student</h3>
+<details>
+<summary>Register an student 🤓</summary>
+
+<br>
 
 ```rust
 pub fn student_register(
@@ -146,6 +149,8 @@ This function takes as arguments the context, which contains information relevan
 The function first validates that the quarter is greater than zero, the first and last name do not exceed 50 characters, and that the password of the user who performs the transaction is the same as that of the school administrator. It then uses the student's account to store their information and generates a unique program address using the student number and program key. Then, update the number of students and the total number of students registered in the school accounts and the main school account. Finally, it returns a success result.
 
 The StudentRegister structure is used to define the accounts that are used in the function. In particular, the feature requires access to the school's account, the account of the student being registered, the school's main account, and the account of the user making the transaction. Each account is defined using the #[account] macro and additional information is provided, such as seeds and bump, which are used to generate the unique program address.
+
+</details>
 
 <h3 align="center">Record grades</h3>
 
