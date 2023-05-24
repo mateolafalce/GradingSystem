@@ -10,14 +10,14 @@ A school and university grading system
 
 ---
 
-The Notes-system repository contains the source code of a decentralized application based on the Solana blockchain, which allows the storage of school and university grades in a secure and decentralized manner.The application was designed to offer a secure and reliable alternative to traditional registration systems, in which data is centralized and susceptible to fraud and manipulation.
+The Notes-system repository contains the source code of a decentralized application based on the Solana blockchain, which allows the storage of school and university grades in a secure and decentralized manner. The application was designed to offer a secure and reliable alternative to traditional registration systems, in which data is centralized and susceptible to fraud and manipulation.
 
 The app uses Solana's blockchain technology to publicly and securely store scores, allowing anyone to access them and verify their authenticity without the need for intermediaries. Furthermore, the app uses cryptography to protect the privacy of student data, only allowing authorized users to access it. The application source code is available in this Github repository under the Apache 2.0 license, and is available for anyone to review, modify, and contribute to the development of the project.
 
-I, Mateo Lafalce, as the developer of the project, believe in the importance of education and transparency in educational systems, and hope that this application can help make a positive change in the field of education.
+<details>
+<summary>Init a the main account 🏢</summary>
 
-
-<h3 align="center">Init a the main account</h3>
+<br>
 
 ```rust
 pub fn school_main_account(
@@ -50,6 +50,8 @@ In the function implementation, you get a mutable reference to the school_main_a
 Next, the initial values ​​of the account fields school_main_account are set. The bump_original field is set to the bump generated value, which is used to generate the public address. The total_schools and total_students fields are set to zero.
 
 Finally, an Ok(()) result is returned indicating that the account initialization was successful.
+
+</details>
 
 <h3 align="center">Register an school/university</h3>
 
