@@ -152,7 +152,10 @@ The StudentRegister structure is used to define the accounts that are used in th
 
 </details>
 
-<h3 align="center">Record grades</h3>
+<details>
+<summary>Record grades 📝</summary>
+
+<br>
 
 ```rust
 pub fn school_notes(
@@ -204,3 +207,5 @@ The SchoolNotes structure is decorated with Rust's Accounts attribute, which spe
 The notes field represents the student's notes account, which is initialized with the seeds required to generate their address on the Solana blockchain, payer, account size, and is tagged as mutable. The user field represents the digital signature of the user calling the function and is also labeled mutable.
 
 Finally, the system_program field represents the system program used to execute the function on the Solana blockchain.
+
+</details>
