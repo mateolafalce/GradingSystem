@@ -53,7 +53,10 @@ Finally, an Ok(()) result is returned indicating that the account initialization
 
 </details>
 
-<h3 align="center">Register an school/university</h3>
+<details>
+<summary>Register an school/university 📚 </summary>
+
+<br>
 
 ```rust
 pub fn school_register(
@@ -93,6 +96,8 @@ The code first checks that the school name does not exceed 50 characters, and th
 After the school account is created, the function updates the main account main_account to reflect the fact that a new school has been registered. Finally, the function returns an Ok(()) result to indicate that the operation has completed successfully.
 
 The SchoolRegister structure defines the requirements for the accounts that must be provided when calling the school_register function. The main_account is an account that keeps track of all schools registered on the blockchain. The school account is the school account that will be created during the execution of the function. The user account is the account of the user making the function call, and the system_program account is a system account required by the function.
+
+</details>
 
 <h3 align="center">Register an student</h3>
 
