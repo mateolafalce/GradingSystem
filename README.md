@@ -14,6 +14,8 @@ The Notes-system repository contains the source code of a decentralized applicat
 
 The app uses Solana's blockchain technology to publicly and securely store scores, allowing anyone to access them and verify their authenticity without the need for intermediaries. Furthermore, the app uses cryptography to protect the privacy of student data, only allowing authorized users to access it. The application source code is available in this Github repository under the Apache 2.0 license, and is available for anyone to review, modify, and contribute to the development of the project.
 
+---
+
 <details>
 <summary>Init a the main account 🏢</summary>
 
@@ -52,6 +54,8 @@ Next, the initial values ​​of the account fields school_main_account are set
 Finally, an Ok(()) result is returned indicating that the account initialization was successful.
 
 </details>
+
+---
 
 <details>
 <summary>Register an school/university 📚 </summary>
@@ -98,6 +102,8 @@ After the school account is created, the function updates the main account main_
 The SchoolRegister structure defines the requirements for the accounts that must be provided when calling the school_register function. The main_account is an account that keeps track of all schools registered on the blockchain. The school account is the school account that will be created during the execution of the function. The user account is the account of the user making the function call, and the system_program account is a system account required by the function.
 
 </details>
+
+---
 
 <details>
 <summary>Register an student 🤓</summary>
@@ -151,6 +157,8 @@ The function first validates that the quarter is greater than zero, the first an
 The StudentRegister structure is used to define the accounts that are used in the function. In particular, the feature requires access to the school's account, the account of the student being registered, the school's main account, and the account of the user making the transaction. Each account is defined using the #[account] macro and additional information is provided, such as seeds and bump, which are used to generate the unique program address.
 
 </details>
+
+---
 
 <details>
 <summary>Record grades 📝</summary>
@@ -209,3 +217,5 @@ The notes field represents the student's notes account, which is initialized wit
 Finally, the system_program field represents the system program used to execute the function on the Solana blockchain.
 
 </details>
+
+---
