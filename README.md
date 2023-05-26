@@ -2,7 +2,7 @@
 
 ![notes-system](notes-system.png)
 
-<h1>Notes system</h1>
+<h1>Grading System</h1>
 
 A school and university grading system
 
@@ -10,7 +10,7 @@ A school and university grading system
 
 ---
 
-The Notes-system repository contains the source code of a decentralized application based on the Solana blockchain, which allows the storage of school and university grades in a secure and decentralized manner. The application was designed to offer a secure and reliable alternative to traditional registration systems, in which data is centralized and susceptible to fraud and manipulation.
+The GradingSystem repository contains the source code of a decentralized application based on the Solana blockchain, which allows the storage of school and university grades in a secure and decentralized manner. The application was designed to offer a secure and reliable alternative to traditional registration systems, in which data is centralized and susceptible to fraud and manipulation.
 
 The app uses Solana's blockchain technology to publicly and securely store scores, allowing anyone to access them and verify their authenticity without the need for intermediaries. Furthermore, the app uses cryptography to protect the privacy of student data, only allowing authorized users to access it. The application source code is available in this Github repository under the Apache 2.0 license, and is available for anyone to review, modify, and contribute to the development of the project.
 
