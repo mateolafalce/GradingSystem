@@ -1,12 +1,13 @@
 [package]
-name = "notes"
+name = "grades"
 version = "0.1.0"
 edition = "2021"
+authors = ["Mateo Lafalce <mateo.lafalce04@gmail.com>"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-notes_system = { path = "./notes_system", features = ["no-entrypoint"] }
+grading_system = { path = "./grading_system", features = ["no-entrypoint"] }
 anchor-client = { version = "0.26.0", features = ["debug"] }
 anyhow = "1.0.68"
 shellexpand = "3.0.0"

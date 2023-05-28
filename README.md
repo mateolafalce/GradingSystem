@@ -1,6 +1,6 @@
 <div align="center">
 
-![notes-system](notes-system.png)
+![GradingSystem](GradingSystem.png)
 
 <h1>Grading System</h1>
 

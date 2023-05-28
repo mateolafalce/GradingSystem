@@ -9,7 +9,7 @@ pub mod state;
 declare_id!("69WHEGSYxyLKExZNW7rPmr4T1i3Te9N54VxWKafb6dDU");
 
 #[program]
-pub mod notes_system {
+pub mod grading_system {
     use super::*;
     pub fn school_main_account(ctx: Context<InitSchoolMainAccount>) -> Result<()> {
         instructions::school_main_account::school_main_account(ctx)

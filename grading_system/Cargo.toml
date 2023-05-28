@@ -1,7 +1,7 @@
 [package]
-name = "notes_system"
+name = "grading_system"
 version = "0.1.0"
-description = "Notes System"
+description = "grading_system"
 edition = "2021"
 
 [lib]
