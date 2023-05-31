@@ -1,7 +1,7 @@
 use anchor_lang::{
     prelude::*,
     solana_program::pubkey::Pubkey,
-}; 
+};
 use crate::state::accounts::*;
 use crate::errors::ErrorCode;
 
@@ -16,9 +16,11 @@ pub fn school_notes(
     work_and_citizenship: u8,
     deports: u8,
 ) -> Result<()> {
+    // Ensure that the user executing the function is the school admin
     require!(ctx.accounts.user.key() == ctx.accounts.school.admin.key(), ErrorCode::AuthorityError);
     let student: &mut Account<StudentAccount> = &mut ctx.accounts.student;
     let notes: &mut Account<NotesAccount> = &mut ctx.accounts.notes;
+    // Push the subject grades to the respective arrays in the notes account
     notes.philosophy.push(philosophy);
     notes.english.push(english);
     notes.biology.push(biology);
@@ -27,6 +29,7 @@ pub fn school_notes(
     notes.mathematics.push(mathematics);
     notes.work_and_citizenship.push(work_and_citizenship);
     notes.deports.push(deports);
+    // Increment the trimester count for the student
     student.trimester += 1;
     Ok(())
 }
