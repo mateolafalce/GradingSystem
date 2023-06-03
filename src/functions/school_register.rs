@@ -14,11 +14,14 @@ pub fn school_register(
     name: String,
     student_number: u64
 ) -> Result<()> {
+    // Find the main account's public key using the program ID
     let (main_account, _bump): (Pubkey, u8) =
         Pubkey::find_program_address(&[b"Main Account"], &program.id());
+    // Retrieve the main account data using the main account's public key
     let main_account_data: SchoolMainAccount = program.account(main_account)?;
     let (school, _bump): (Pubkey, u8) =
         Pubkey::find_program_address(&[main_account_data.total_schools.to_be_bytes().as_ref()], &program.id());
+    // Send a transaction request to the program for school registration
     let tx: Signature = program
         .request()
         .accounts(notes_system::accounts::SchoolRegister {
@@ -32,6 +35,7 @@ pub fn school_register(
             student_number
         })
         .send()?;
+    // Print transaction details
     println!("------------------------------------------------------------");
     println!("Tx: {}", tx);
     println!("------------------------------------------------------------");
