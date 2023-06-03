@@ -16,11 +16,15 @@ pub fn student_register(
     trimester: u8,
     school: Pubkey
 ) -> Result<()> {
+    // Generate a unique main account key based on the program ID
     let (main_account, _bump): (Pubkey, u8) =
         Pubkey::find_program_address(&[b"Main Account"], &program.id());
+    // Fetch the school account associated with the provided pubkey
     let school_account: SchoolAccount = program.account(school)?;
+    // Generate a unique student account key based on the school account's student number and program ID
     let (student, _bump): (Pubkey, u8) =
         Pubkey::find_program_address(&[school_account.student_number.to_be_bytes().as_ref()], &program.id());
+    // Invoke the program's 'StudentRegister' instruction by creating and sending a transaction
     let tx: Signature = program
         .request()
         .accounts(notes_system::accounts::StudentRegister {
@@ -36,8 +40,10 @@ pub fn student_register(
             trimester
         })
         .send()?;
+    // Print transaction information for debugging purposes
     println!("------------------------------------------------------------");
     println!("Tx: {}", tx);
     println!("------------------------------------------------------------");
+
     Ok(())
 }
