@@ -2,9 +2,7 @@
 
 ![GradingSystem](GradingSystem.png)
 
-<h1>Grading System</h1>
-
-A school and university grading system
+## Grading System
 
 ---
 
