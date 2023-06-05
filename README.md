@@ -6,6 +6,18 @@
 
 A school and university grading system
 
+---
+
+![GitHub Repo stars](https://img.shields.io/github/stars/mateolafalce/GradingSystem?color=greent&style=for-the-badge)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/mateolafalce/GradingSystem?color=greent&style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/mateolafalce/GradingSystem?color=greent&style=for-the-badge)
+
+![GitHub](https://img.shields.io/github/license/mateolafalce/GradingSystem?color=greent&style=for-the-badge)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/mateolafalce/RustyFltkIDE?color=greent&style=for-the-badge)
+
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed-raw/mateolafalce/GradingSystem?color=greent&style=for-the-badge)
+![GitHub closed issues](https://img.shields.io/github/issues-closed/mateolafalce/GradingSystem?color=greent&style=for-the-badge)
+
 </div>
 
 ---
