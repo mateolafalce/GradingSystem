@@ -10,7 +10,7 @@ use instructions::{
     school_register::school_register_, student_register::student_register_,
 };
 
-declare_id!("69WHEGSYxyLKExZNW7rPmr4T1i3Te9N54VxWKafb6dDU");
+declare_id!("5GZTR4UtisYrZ8aUN3gsUisMESbMKBMgdbkZezzKouQs");
 
 #[program]
 pub mod grading_system {

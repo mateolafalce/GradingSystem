@@ -15,11 +15,10 @@ pub fn school_notes_(
     let student_number: &[u8] = &ctx.accounts.student.number.to_be_bytes();
     let trimester: &[u8] = &ctx.accounts.student.trimester.to_be_bytes();
     let program_id: &Pubkey = ctx.program_id;
-
+    let (pda, bump) = Pubkey::find_program_address(&[&student_number, trimester], program_id);
+    require_keys_eq!(pda, ctx.accounts.grades.key());
     require_keys_eq!(signer, authority);
-
     let grades: &mut Account<GradesAccount> = &mut ctx.accounts.grades;
-    let (_pda, bump) = Pubkey::find_program_address(&[&student_number, trimester], program_id);
     grades.set_bump_original(bump);
     grades.set_grades(
         philosophy,
@@ -29,7 +28,6 @@ pub fn school_notes_(
         mathematics,
         deports,
     );
-
     let student: &mut Account<StudentAccount> = &mut ctx.accounts.student;
     student.add_trimester();
     Ok(())
